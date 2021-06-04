@@ -1,0 +1,37 @@
+apt = é um conjunto de ferramentas para administrar pacotes .deb, nativo do GNU/Linux Debian e usado também 
+em distribuições baseadas em Debian como Ubuntu, Mint, Deepin etc.
+dpkg = é uma manipulador de pacotes .deb
+
+*o caractere / indicará que aquela linha é um comando, o / não deverá ser incluído na digitação do comando
+
+/sudo apt-get update
+*atualiza a lista de pacotes disponíveis
+
+/sudo apt-get upgrade
+*atualiza os pacotes já instados no sistema com as versões mais recentes
+
+/apt-cache search ftp
+*buscar programas em servidores ftp
+
+/apt-cache search NomeServidorFTP
+*buscar programas num servidor já conhecido
+
+/apt-cache show Pacote/Programa
+*mostra informações do pacote ou programa, não precisa estar instalado
+
+/sudo apt-get remove NomePrograma
+*desinstala o programa, pode ficar resíduos do programa
+
+/sudo apt purge NomePrograma
+*limpar completamente o programa do sistema
+
+/sudo apt-get -f install
+*pede para o apt-get tentar resolver problemas de dependência
+
+/sudo dpkg -i NomePrograma.deb
+*instala pacotes/programas .deb
+
+/sudo dpkg -r NomePrograma
+*desinstala o programa
+
+*em criação
