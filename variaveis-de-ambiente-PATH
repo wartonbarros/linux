@@ -1,13 +1,18 @@
-/usr/bin/
-*diretório com programas globais, todos os programas colocados nesta pasta, podem ser invocados de qualquer lugar do sistema e por qualquer usuário, o que não restringe nada em relação a segurança
+*o caractere / indicará que aquela linha é um comando, o / não deverá ser incluído na digitação do comando
 
-env
+
+/usr/bin/
+*diretório com programas globais, todos os programas colocados nesta pasta, 
+*podem ser invocados de qualquer lugar do sistema e por qualquer usuário, 
+*o que não restringe nada em relação a segurança
+
+/env
 *exibe as variáveis de ambiente definidas
 
-env | grep PATH
+/env | grep PATH
 *melhor visualização das variáveis de ambiente, passando o comando env para o programa de busca grep
 
-PATH=$PATH:/caminho/DaPasta/QueSera/AdicionadaNoPATH
+/PATH=$PATH:/caminho/DaPasta/QueSera/AdicionadaNoPATH
 *comando para adicionar uma pasta ao PATH
 *os dados alterados aqui são gravados apenas nesse bash, quando for fechado essas configurações irão sumir
 
@@ -15,10 +20,12 @@ PATH=$PATH:/caminho/DaPasta/QueSera/AdicionadaNoPATH
 *arquivo que é carregado toda vez que um novo shell é aberto
 *para gravar permanentemente uma variável de ambiente, basta colocar o seguinte comando neste arquivo .bashrc
 
-PATH=$PATH:/caminho/DaPasta/QueSera/AdicionadaNoPATH
+/PATH=$PATH:/caminho/DaPasta/QueSera/AdicionadaNoPATH
 *agora o comando ficará gravado definitivamente até que seja removido
-*este programa irá funcionar apenas para este usuário, não ficará disponível nem para o usuário root obedecendo a variável de ambiente, o root conseguiria acessar percorrendo todo o caminho, para funcionar para todos os usuários seria necessário colocar na pasta /usr/bin/
+*este programa irá funcionar apenas para este usuário, não ficará disponível nem 
+*para o usuário root obedecendo a variável de ambiente, o root conseguiria acessar 
+*percorrendo todo o caminho, para funcionar para todos os usuários seria necessário colocar na pasta /usr/bin/
 
-
+*em criação
 
 
