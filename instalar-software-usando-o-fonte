@@ -1,8 +1,15 @@
+*o caractere / indicará que aquela linha é um comando, o / não deverá ser incluído na digitação do comando
+
 ./configure
 *quando estiver disponível, esse scrip verificará se não falta alguma dependência para a instalação
+*no linux o catactere . refere-se a pasta em que o usuário se encontra, você pode usa-lo combinado 
+*com o caractere / para iniciar scripts
 
-make
-*comando padrão para rodar um build de um projeto em C, caso esteja usando outra linguagem o comando pode ser outro
+/make
+*comando padrão para rodar um build de um projeto em C, caso esteja usando outra linguagem 
+o comando pode ser outro, pesquise na documentação da linguagem
 
-sudo make install
+/sudo make install
 *fará a instalação dos arquivos gerados pelo make
+
+*em criação
