@@ -1,3 +1,4 @@
+
 :q 
 *sai do Vim 
 
@@ -18,3 +19,6 @@ hjkl
 
 .vimrc
 *arquivo de configuração do Vim, geralmente fica na pasta do usuário /home/usuário
+
+
+*em criação
