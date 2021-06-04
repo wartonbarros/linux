@@ -1,0 +1,8 @@
+./configure
+*quando estiver disponível, esse scrip verificará se não falta alguma dependência para a instalação
+
+make
+*comando padrão para rodar um build de um projeto em C, caso esteja usando outra linguagem o comando pode ser outro
+
+sudo make install
+*fará a instalação dos arquivos gerados pelo make
