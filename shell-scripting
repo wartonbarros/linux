@@ -10,10 +10,95 @@
 
 
 
+*script
 
 
+#!/bin/bash
+#indicação de que o interpretador de comandos será o bash
 
 
+converte_imagem(){
+#início da função
+
+#CAMINHO_IMAGENS=~/Documents/linux-alura/shellScripting/imagens-livros/
+#constante com caminho das imagens
+cd ~/Documents/linux-alura/shellScripting/imagens-livroS/
+#entrará direto na pasta imagens-livros
+
+
+if [ ! -d png ]
+then 
+	mkdir png
+fi
+#-d verifica se o diretório png existe
+#! está negando a opção, ou seja, se não existir o diretório png
+#then mkdir png = então crie um diretório chamado png
+#fi sai do if = se
+
+
+#for imagem in $@
+#$@ indica qualquer entrada do usuário
+
+for imagem in *jpg
+#pegará todos os arquivo com extensão .jpg
+
+do
+	local imagem_sem_extensao=$(ls $imagem | awk -F. '{ print $1 }')
+	#local indica que o conteúdo desta variável só pode ser acessado 
+	#dentro da função converte_imagem
+	#imagem-sem-extensao é uma variável
+	#$() indica que a constante deverá receber o resultado desse código
+	#caso isso não fosse apontado a constante receberia literalmente 
+	#ls $imagem | awk -F. '{ print $1 }'
+	#| pipe indica que ls usará outro programa para incrementar seu comando 
+	#awk é o programa que usaremos para dividir o nome dos arquivos
+	#a opção -F. indica que o local de divisão será o .
+	#'{ print $1 }' indica que o que será impresso é a primeira parte do nome do arquivo
+
+	#para pegarmos o primeiro parâmetro inserido pelo usuário ou como resultado
+	#de algum outro comando, usamos o número 1 precedido do símbolo $
+
+	#convert $CAMINHO_IMAGENS/$imagem.jpg $CAMINHO_IMAGENS/$imagem.png
+	#convert $imagem.jpg $imagem.png
+	#erro
+	convert $imagem_sem_extensao.jpg png/$imagem_sem_extensao.png
+
+
+#usamos o símbolo dolar para chamar uma constante 
+done
+}
+#fim da função
+
+
+converte_imagem 2>~/Documents/linux-alura/shellScripting/scripts/logs/erros_conversao.txt
+#invocando a função
+#2> está redirecionando as mensagens de erro padrão para o arquivo erros_conversao.txt
+#caso isso não fosse tratado, todo o erro seria exibido para o usuário
+
+#quando um comando é executado no linux, ele emite um status de saída,
+#quando o comando é executado com sucesso ele sai com status 0
+#quando há alguma falha ele emite um status que varia entre 1 e 255
+
+#o fluxo de execução do script é sequenciado por entrada, saída, e erros
+#o 0 indica uma entrada padrão
+#o 1 indica uma saída padrão
+#o 2 indica a mensagem de erro padrão
+
+#verificaremos o status de saída da função converte_imagem
+
+
+if [ $? -eq 0 ]
+then 
+	echo "Conversão realizada com sucesso"
+else
+	echo "Houve uma falha no processo"
+fi
+#$? pega o status de saída de uma função ou comando
+# -eq = equal, verifica se o status é igual a 0
+#fi sai do if
+
+
+*fimscript
 
 
 
