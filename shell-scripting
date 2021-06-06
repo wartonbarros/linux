@@ -1,1 +1,54 @@
+*usaremos um programa chamado image-magic para fazer a conversão de formato de 
+*alguns arquivos de imagem com o comando convert
+*você pode usar o comando display para abrir imagens a partir do terminal pelo image magick
 
+/convert arquivo.extensão arquivo.novaExtensão
+*fazendo a conversão da extensão de um arquivo de imagem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*em criação
